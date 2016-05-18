@@ -1,9 +1,10 @@
 create table MDMUNITS(
-	unitnm    VARCHAR2(36),
-	unitcode    VARCHAR2(30),
-	unitname    VARCHAR2(10),
-	ishistory    CHAR(1),
-	createtime    DATE,
-	lastmodifiedtime    DATE,
-	PRIMARY KEY (unitnm) 
+	UNITCD  VARCHAR2(36),
+	UNITNM VARCHAR2(10),
+	SSNM      VARCHAR2(10),
+	RECSTATUS  CHAR(1),
+	STOPFLAG    CHAR(1),
+	RECCREATETIME  DATE,
+	RECUPDATETIME DATE,
+	PRIMARY KEY (UNITNM) 
 );

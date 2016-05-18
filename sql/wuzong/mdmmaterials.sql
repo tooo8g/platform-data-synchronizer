@@ -1,13 +1,14 @@
 create table MDMMATERIALS(
-	materialnm         VARCHAR2(36),
-	spesorts           VARCHAR2(500),
-	materialcode       VARCHAR2(30),
-	materialname       VARCHAR2(1024),
-	specs              VARCHAR2(2000),
-	materialsortnm     VARCHAR2(36),
-	primaryunitnm      VARCHAR2(36),
-	stopflag           CHAR(1),
-	createtime         DATE,
-	lastmodifiedtime   DATE,
-	PRIMARY KEY (materialnm)
+	PRODUCTCD  VARCHAR2(36),
+	SPECS  VARCHAR2(36),
+	PRODDETAILS  VARCHAR2(50),
+	PRODUCTNM   VARCHAR2(36),
+	PRODUCTSNM  VARCHAR2(36),
+	UNITCD  VARCHAR2(36),
+	STOPFLAG  CHAR(1),
+	RECTYPE    CHAR(1),
+	RECCREATETIME  DATE,
+	RECUPDATETIME  DATE	,
+	MATERIALCODE   VARCHAR2(36),
+	PRIMARY KEY (PRODUCTCD)
 );

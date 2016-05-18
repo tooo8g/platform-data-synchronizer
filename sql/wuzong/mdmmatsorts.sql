@@ -1,13 +1,13 @@
 create table MDMMATSORTS(
-	materialsortnm    VARCHAR2(36),
-	materialsortcode    VARCHAR2(30),
-	materialsortname    VARCHAR2(512),
-	materialsortpath    VARCHAR2(36),
-	spetype    VARCHAR2(2),
-	layer    INTEGER,
-	isdetail    CHAR(1),
-	ishistory    CHAR(1),
-	createtime    DATE,
-	lastmodifiedtime    DATE,
-	PRIMARY KEY (materialsortnm)
+	SPESORTS   VARCHAR2(5),
+	MATERIALSORTNM VARCHAR2(36),
+	CLASSCD  VARCHAR2(20),
+	CLASSNM VARCHAR2(20),
+	PARENTCLASSCD VARCHAR2(20),
+	CLASSLEVEL  CHAR(1),
+	STOPFLAG     CHAR(1),
+	RECSTATUS    CHAR(1),
+	RECCREATETIME DATE,
+	RECUPDATETIME DATE,
+	PRIMARY KEY (MATERIALSORTNM)
 );
