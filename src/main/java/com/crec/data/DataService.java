@@ -13,15 +13,12 @@ import com.crec.conn.ConnectionPool;
 public class DataService {
 	public static boolean add_mdmunits(MDMUNITS[] data) {
 		String insert = "insert into MDMUNITS(UNITCD,UNITNM,SSNM,RECSTATUS,STOPFLAG,RECCREATETIME,RECUPDATETIME) values(?,?,?,?,?,?,?)";
-		String delete = "delete from MDMUNITS where UNITCD=?";
 		ConnectionPool pool = ConnectionPool.getInstance();
 		Connection conn = pool.getConnection();
 		try {
-			PreparedStatement p_delete = conn.prepareStatement(delete);
 			PreparedStatement p_insert = conn.prepareStatement(insert);
 			conn.setAutoCommit(false);
 			for (MDMUNITS d : data) {
-				p_delete.setString(1, d.getUNITCD());
 				p_insert.setString(1,d.getUNITCD());
 				p_insert.setString(2, d.getUNITNM());
 				p_insert.setString(3, d.getSSNM());
@@ -31,7 +28,6 @@ public class DataService {
 				p_insert.setDate(7,(java.sql.Date) d.getRECUPDATETIME());
 				p_insert.addBatch();
 			}
-			p_delete.executeBatch();
 			p_insert.executeBatch();
 			conn.commit();
 			conn.setAutoCommit(true);
@@ -52,15 +48,12 @@ public class DataService {
 		String insert = "insert into MDMMATSORTS(SPESORTS,MATERIALSORTNM,CLASSCD,"
 				+ "CLASSNM,PARENTCLASSCD,CLASSLEVEL,STOPFLAG,RECSTATUS,RECCREATETIME,RECUPDATETIME)"
 				+ " values(?,?,?,?,?,?,?,?,?,?)";
-		String delete = "delete from MDMMATSORTS where MATERIALSORTNM=?";
 		ConnectionPool pool = ConnectionPool.getInstance();
 		Connection conn = pool.getConnection();
 		try {
-			PreparedStatement p_delete = conn.prepareStatement(delete);
 			PreparedStatement p_insert = conn.prepareStatement(insert);
 			conn.setAutoCommit(false);
 			for (MDMMATSORTS d : data) {
-				p_delete.setString(1, d.getMATERIALSORTNM());
 				p_insert.setString(1, d.getMATERIALSORTNM());
 				p_insert.setString(2, d.getCLASSCD());
 				p_insert.setString(3, d.getCLASSNM());
@@ -72,7 +65,6 @@ public class DataService {
 				p_insert.setDate(10, (java.sql.Date)d.getRECUPDATETIME());
 				p_insert.addBatch();
 			}
-			p_delete.executeBatch();
 			p_insert.executeBatch();
 			conn.commit();
 			conn.setAutoCommit(true);
@@ -95,15 +87,12 @@ public class DataService {
 				+ "PRODUCTSNM,UNITCD,STOPFLAG,RECTYPE,"
 				+ "RECCREATETIME,RECUPDATETIME,MATERIALCODE)"
 				+ " values(?,?,?,?,?,?,?,?,?,?,?)";
-		String delete = "delete from MDMMATERIALS where PRODUCTCD=?";
 		ConnectionPool pool = ConnectionPool.getInstance();
 		Connection conn = pool.getConnection();
 		try {
-			PreparedStatement p_delete = conn.prepareStatement(delete);
 			PreparedStatement p_insert = conn.prepareStatement(insert);
 			conn.setAutoCommit(false);
 			for (MDMMATERIALS d : data) {
-				p_delete.setString(1, d.getPRODUCTCD());
 				p_insert.setString(1, d.getPRODUCTCD());
 				p_insert.setString(2, d.getSPECS());
 				p_insert.setString(3, d.getPRODDETAILS());
@@ -117,7 +106,6 @@ public class DataService {
 				p_insert.setString(11, d.getMATERIALCODE());
 				p_insert.addBatch();
 			}
-			p_delete.executeBatch();
 			p_insert.executeBatch();
 			conn.commit();
 			conn.setAutoCommit(true);
@@ -138,15 +126,12 @@ public class DataService {
 		String insert = "insert into MDMMATCOM(SPESORTS,PRODUCTCD,CLASSCD,RECSTATUS,"
 				+ "RECCREATETIME,RECUPDATETIME"
 				+ " values(?,?,?,?,?,?)";
-		String delete = "delete from MDMMATCOM where PRODUCTCD=?";
 		ConnectionPool pool = ConnectionPool.getInstance();
 		Connection conn = pool.getConnection();
 		try {
-			PreparedStatement p_delete = conn.prepareStatement(delete);
 			PreparedStatement p_insert = conn.prepareStatement(insert);
 			conn.setAutoCommit(false);
 			for (MDMMATCOM d : data) {
-				p_delete.setString(1, d.getPRODUCTCD());
 				p_insert.setString(1, d.getSPESORTS());
 				p_insert.setString(2, d.getPRODUCTCD());
 				p_insert.setString(3, d.getCLASSCD());
@@ -155,7 +140,6 @@ public class DataService {
 				p_insert.setDate(6, (java.sql.Date) d.getRECUPDATETIME());
 				p_insert.addBatch();
 			}
-			p_delete.executeBatch();
 			p_insert.executeBatch();
 			conn.commit();
 			conn.setAutoCommit(true);
