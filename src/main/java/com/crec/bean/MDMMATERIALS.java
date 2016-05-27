@@ -6,32 +6,21 @@ public class MDMMATERIALS {
 	
 	private String ID;
 	private String SPESORTS;//分类树【新增字段】
-	private String PRODUCTCD;//产品代码（唯一）
-	private String SPECS;//规格型号【新增字段】
-	private String MATERIALCZ;//材质【新增字段】
-	private String DRAWNO;//图号【新增字段】
-	private String PRODDETAILS;//产品详细描述
-	private String PRODUCTNM;//产品名称
-	private String PRODUCTSNM;//产品简称
-	private String CLASSCD;//产品类别
-	private String PRODUCTAREA;//产地
-	private String UNITCD;//计量单位代码
-	private String MEASUREUNIT;//计量单位
-	private String SALEUNIT;//销售单位
-	private String CHANGERATE;
-	private String TAXRATE;
-	private String VENDORCD;//供应商
-	private String STOPFLAG;//停用标识【新增字段】
-	private String RECTYPE;//操作类型
-	private String RECSTATUS;//状态
+	private String product_in_id;//物料内码
+	private String productmodel;//规格型号【新增字段】
+	private String productmaterial;//材质【新增字段】
+	private String productth;//图号【新增字段】
+	private String proddetails;//产品详细描述
+	private String productnm;//细目名称(标准名称)
+	private String productsnm;//物料名称(俗称)
+	private String class_id;//物料分类内码
+	private String unit_id;//计量单位内码
+	private String recnote;//停用标识（“0”在用，“1”停用）
+	private String rectype;//修订状态(0-新增 1-修改 2-删除 3-其它)
 	private Date RECCREATETIME;//创建时间
 	private Date RECUPDATETIME;//最后修改时间
-	private String RECCREATEEMPNM;//数据来源
-	private String RECUPDATEEMPNM;//
-	private String RECNOTE;//
-	private String PRODUCTCODE;//应用代码
-	private String MATERIALCODE;//物料编码【新增字段】
-	
+	private String PRODUCTCODE;//既有编码
+	private String productcd;//物料编码
 	
 	public String getID() {
 		return ID;
@@ -45,113 +34,71 @@ public class MDMMATERIALS {
 	public void setSPESORTS(String sPESORTS) {
 		SPESORTS = sPESORTS;
 	}
-	public String getPRODUCTCD() {
-		return PRODUCTCD;
+	public String getProduct_in_id() {
+		return product_in_id;
 	}
-	public void setPRODUCTCD(String pRODUCTCD) {
-		PRODUCTCD = pRODUCTCD;
+	public void setProduct_in_id(String product_in_id) {
+		this.product_in_id = product_in_id;
 	}
-	public String getSPECS() {
-		return SPECS;
+	public String getProductmodel() {
+		return productmodel;
 	}
-	public void setSPECS(String sPECS) {
-		SPECS = sPECS;
+	public void setProductmodel(String productmodel) {
+		this.productmodel = productmodel;
 	}
-	public String getMATERIALCZ() {
-		return MATERIALCZ;
+	public String getProductmaterial() {
+		return productmaterial;
 	}
-	public void setMATERIALCZ(String mATERIALCZ) {
-		MATERIALCZ = mATERIALCZ;
+	public void setProductmaterial(String productmaterial) {
+		this.productmaterial = productmaterial;
 	}
-	public String getDRAWNO() {
-		return DRAWNO;
+	public String getProductth() {
+		return productth;
 	}
-	public void setDRAWNO(String dRAWNO) {
-		DRAWNO = dRAWNO;
+	public void setProductth(String productth) {
+		this.productth = productth;
 	}
-	public String getPRODDETAILS() {
-		return PRODDETAILS;
+	public String getProddetails() {
+		return proddetails;
 	}
-	public void setPRODDETAILS(String pRODDETAILS) {
-		PRODDETAILS = pRODDETAILS;
+	public void setProddetails(String proddetails) {
+		this.proddetails = proddetails;
 	}
-	public String getPRODUCTNM() {
-		return PRODUCTNM;
+	public String getProductnm() {
+		return productnm;
 	}
-	public void setPRODUCTNM(String pRODUCTNM) {
-		PRODUCTNM = pRODUCTNM;
+	public void setProductnm(String productnm) {
+		this.productnm = productnm;
 	}
-	public String getPRODUCTSNM() {
-		return PRODUCTSNM;
+	public String getProductsnm() {
+		return productsnm;
 	}
-	public void setPRODUCTSNM(String pRODUCTSNM) {
-		PRODUCTSNM = pRODUCTSNM;
+	public void setProductsnm(String productsnm) {
+		this.productsnm = productsnm;
 	}
-	public String getCLASSCD() {
-		return CLASSCD;
+	public String getClass_id() {
+		return class_id;
 	}
-	public void setCLASSCD(String cLASSCD) {
-		CLASSCD = cLASSCD;
+	public void setClass_id(String class_id) {
+		this.class_id = class_id;
 	}
-	public String getPRODUCTAREA() {
-		return PRODUCTAREA;
+	public String getUnit_id() {
+		return unit_id;
 	}
-	public void setPRODUCTAREA(String pRODUCTAREA) {
-		PRODUCTAREA = pRODUCTAREA;
+	public void setUnit_id(String unit_id) {
+		this.unit_id = unit_id;
 	}
-	public String getUNITCD() {
-		return UNITCD;
+	public String getRecnote() {
+		return recnote;
 	}
-	public void setUNITCD(String uNITCD) {
-		UNITCD = uNITCD;
+	public void setRecnote(String recnote) {
+		this.recnote = recnote;
 	}
-	public String getMEASUREUNIT() {
-		return MEASUREUNIT;
+	public String getRectype() {
+		return rectype;
 	}
-	public void setMEASUREUNIT(String mEASUREUNIT) {
-		MEASUREUNIT = mEASUREUNIT;
-	}
-	public String getSALEUNIT() {
-		return SALEUNIT;
-	}
-	public void setSALEUNIT(String sALEUNIT) {
-		SALEUNIT = sALEUNIT;
-	}
-	public String getCHANGERATE() {
-		return CHANGERATE;
-	}
-	public void setCHANGERATE(String cHANGERATE) {
-		CHANGERATE = cHANGERATE;
-	}
-	public String getTAXRATE() {
-		return TAXRATE;
-	}
-	public void setTAXRATE(String tAXRATE) {
-		TAXRATE = tAXRATE;
-	}
-	public String getVENDORCD() {
-		return VENDORCD;
-	}
-	public void setVENDORCD(String vENDORCD) {
-		VENDORCD = vENDORCD;
-	}
-	public String getSTOPFLAG() {
-		return STOPFLAG;
-	}
-	public void setSTOPFLAG(String sTOPFLAG) {
-		STOPFLAG = sTOPFLAG;
-	}
-	public String getRECTYPE() {
-		return RECTYPE;
-	}
-	public void setRECTYPE(String rECTYPE) {
-		RECTYPE = rECTYPE;
-	}
-	public String getRECSTATUS() {
-		return RECSTATUS;
-	}
-	public void setRECSTATUS(String rECSTATUS) {
-		RECSTATUS = rECSTATUS;
+	public void setRectype(String rectype) {
+		this.rectype = rectype;
 	}
 	public Date getRECCREATETIME() {
 		return RECCREATETIME;
@@ -165,35 +112,19 @@ public class MDMMATERIALS {
 	public void setRECUPDATETIME(Date rECUPDATETIME) {
 		RECUPDATETIME = rECUPDATETIME;
 	}
-	public String getRECCREATEEMPNM() {
-		return RECCREATEEMPNM;
-	}
-	public void setRECCREATEEMPNM(String rECCREATEEMPNM) {
-		RECCREATEEMPNM = rECCREATEEMPNM;
-	}
-	public String getRECUPDATEEMPNM() {
-		return RECUPDATEEMPNM;
-	}
-	public void setRECUPDATEEMPNM(String rECUPDATEEMPNM) {
-		RECUPDATEEMPNM = rECUPDATEEMPNM;
-	}
-	public String getRECNOTE() {
-		return RECNOTE;
-	}
-	public void setRECNOTE(String rECNOTE) {
-		RECNOTE = rECNOTE;
-	}
 	public String getPRODUCTCODE() {
 		return PRODUCTCODE;
 	}
 	public void setPRODUCTCODE(String pRODUCTCODE) {
 		PRODUCTCODE = pRODUCTCODE;
 	}
-	public String getMATERIALCODE() {
-		return MATERIALCODE;
+	public String getProductcd() {
+		return productcd;
 	}
-	public void setMATERIALCODE(String mATERIALCODE) {
-		MATERIALCODE = mATERIALCODE;
+	public void setProductcd(String productcd) {
+		this.productcd = productcd;
 	}
+	
+	
 	
 }

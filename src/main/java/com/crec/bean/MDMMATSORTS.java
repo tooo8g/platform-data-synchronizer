@@ -5,112 +5,82 @@ import java.util.Date;
 public class MDMMATSORTS {
 	
 	private String ID;
-	private String SPESORTS;//分类树【新增字段】
-	private String MATERIALSORTNM;//物料分类内码【新增字段】
-	private String CLASSCD;//大类编码
-	private String CLASSNM;//名称
-	private String PARENTCLASSCD;//父类编码
-	private String CLASSLEVEL;//层级
-	private String STOPFLAG;//停用标志
-	private String RECTYPE;
-	private String RECSTATUS;//修订状态
-	private Date RECCREATETIME;//创建时间
-	private Date RECUPDATETIME;//最后修改时间
-	private String RECCREATEEMPNM;
-	private String RECUPDATEEMPNM;
-	private String RECNOTE;
-	
+	private String spesorts;//分类树【新增字段】
+	private String class_id;//物料分类内码【新增字段】
+	private String classcd;//物料分类编号
+	private String classnm;//物料分类名称
+	private String parentclasscd;//父类编码
+	private String classlevel;//层级
+	private String recnote;//停用标志
+	private String rectype;//修订状态(0-新增 1-修改 2-删除 3-其它);
+	private Date reccreatetime;//创建时间
+	private Date recupdatetime;//最后修改时间
 	public String getID() {
 		return ID;
 	}
 	public void setID(String iD) {
 		ID = iD;
 	}
-	public String getSPESORTS() {
-		return SPESORTS;
+	public String getSpesorts() {
+		return spesorts;
 	}
-	public void setSPESORTS(String sPESORTS) {
-		SPESORTS = sPESORTS;
+	public void setSpesorts(String spesorts) {
+		this.spesorts = spesorts;
 	}
-	public String getMATERIALSORTNM() {
-		return MATERIALSORTNM;
+	public String getClass_id() {
+		return class_id;
 	}
-	public void setMATERIALSORTNM(String mATERIALSORTNM) {
-		MATERIALSORTNM = mATERIALSORTNM;
+	public void setClass_id(String class_id) {
+		this.class_id = class_id;
 	}
-	public String getCLASSCD() {
-		return CLASSCD;
+	public String getClasscd() {
+		return classcd;
 	}
-	public void setCLASSCD(String cLASSCD) {
-		CLASSCD = cLASSCD;
+	public void setClasscd(String classcd) {
+		this.classcd = classcd;
 	}
-	public String getCLASSNM() {
-		return CLASSNM;
+	public String getClassnm() {
+		return classnm;
 	}
-	public void setCLASSNM(String cLASSNM) {
-		CLASSNM = cLASSNM;
+	public void setClassnm(String classnm) {
+		this.classnm = classnm;
 	}
-	public String getPARENTCLASSCD() {
-		return PARENTCLASSCD;
+	public String getParentclasscd() {
+		return parentclasscd;
 	}
-	public void setPARENTCLASSCD(String pARENTCLASSCD) {
-		PARENTCLASSCD = pARENTCLASSCD;
+	public void setParentclasscd(String parentclasscd) {
+		this.parentclasscd = parentclasscd;
 	}
-	public String getCLASSLEVEL() {
-		return CLASSLEVEL;
+	public String getClasslevel() {
+		return classlevel;
 	}
-	public void setCLASSLEVEL(String cLASSLEVEL) {
-		CLASSLEVEL = cLASSLEVEL;
+	public void setClasslevel(String classlevel) {
+		this.classlevel = classlevel;
 	}
-	public String getSTOPFLAG() {
-		return STOPFLAG;
+	public String getRecnote() {
+		return recnote;
 	}
-	public void setSTOPFLAG(String sTOPFLAG) {
-		STOPFLAG = sTOPFLAG;
+	public void setRecnote(String recnote) {
+		this.recnote = recnote;
 	}
-	public String getRECTYPE() {
-		return RECTYPE;
+	public String getRectype() {
+		return rectype;
 	}
-	public void setRECTYPE(String rECTYPE) {
-		RECTYPE = rECTYPE;
+	public void setRectype(String rectype) {
+		this.rectype = rectype;
 	}
-	public String getRECSTATUS() {
-		return RECSTATUS;
+	public Date getReccreatetime() {
+		return reccreatetime;
 	}
-	public void setRECSTATUS(String rECSTATUS) {
-		RECSTATUS = rECSTATUS;
+	public void setReccreatetime(Date reccreatetime) {
+		this.reccreatetime = reccreatetime;
 	}
-	public Date getRECCREATETIME() {
-		return RECCREATETIME;
+	public Date getRecupdatetime() {
+		return recupdatetime;
 	}
-	public void setRECCREATETIME(Date rECCREATETIME) {
-		RECCREATETIME = rECCREATETIME;
+	public void setRecupdatetime(Date recupdatetime) {
+		this.recupdatetime = recupdatetime;
 	}
-	public Date getRECUPDATETIME() {
-		return RECUPDATETIME;
-	}
-	public void setRECUPDATETIME(Date rECUPDATETIME) {
-		RECUPDATETIME = rECUPDATETIME;
-	}
-	public String getRECCREATEEMPNM() {
-		return RECCREATEEMPNM;
-	}
-	public void setRECCREATEEMPNM(String rECCREATEEMPNM) {
-		RECCREATEEMPNM = rECCREATEEMPNM;
-	}
-	public String getRECUPDATEEMPNM() {
-		return RECUPDATEEMPNM;
-	}
-	public void setRECUPDATEEMPNM(String rECUPDATEEMPNM) {
-		RECUPDATEEMPNM = rECUPDATEEMPNM;
-	}
-	public String getRECNOTE() {
-		return RECNOTE;
-	}
-	public void setRECNOTE(String rECNOTE) {
-		RECNOTE = rECNOTE;
-	}
-	
 	
 	
 }

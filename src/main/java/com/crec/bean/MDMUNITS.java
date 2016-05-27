@@ -5,56 +5,48 @@ import java.util.Date;
 public class MDMUNITS {
 	
 	private  String ID;
-	private String UNITCD;//代码
-	private String UNITNM;//名称
-	private String SSNM;//缩写
-	private String NOTE;//备注
-	private String RECSTATUS;//状态
-	private String STOPFLAG;//停用标识【新增字段】
+	private String unit_id;//计量单位内码
+	private String unitnm;//计量单位名称
+	private String ssnm;//缩写
+	private String recnote;//停用标识【新增字段】
+	private String rectype;//修订状态(0-新增 1-修改 2-删除 3-其它)
 	private Date RECCREATETIME;//创建时间
 	private Date RECUPDATETIME;//最后修改时间
-	
 	public String getID() {
 		return ID;
 	}
 	public void setID(String iD) {
 		ID = iD;
 	}
-	public String getUNITCD() {
-		return UNITCD;
+	public String getUnit_id() {
+		return unit_id;
 	}
-	public void setUNITCD(String uNITCD) {
-		UNITCD = uNITCD;
+	public void setUnit_id(String unit_id) {
+		this.unit_id = unit_id;
 	}
-	public String getUNITNM() {
-		return UNITNM;
+	public String getUnitnm() {
+		return unitnm;
 	}
-	public void setUNITNM(String uNITNM) {
-		UNITNM = uNITNM;
+	public void setUnitnm(String unitnm) {
+		this.unitnm = unitnm;
 	}
-	public String getSSNM() {
-		return SSNM;
+	public String getSsnm() {
+		return ssnm;
 	}
-	public void setSSNM(String sSNM) {
-		SSNM = sSNM;
+	public void setSsnm(String ssnm) {
+		this.ssnm = ssnm;
 	}
-	public String getNOTE() {
-		return NOTE;
+	public String getRecnote() {
+		return recnote;
 	}
-	public void setNOTE(String nOTE) {
-		NOTE = nOTE;
+	public void setRecnote(String recnote) {
+		this.recnote = recnote;
 	}
-	public String getRECSTATUS() {
-		return RECSTATUS;
+	public String getRectype() {
+		return rectype;
 	}
-	public void setRECSTATUS(String rECSTATUS) {
-		RECSTATUS = rECSTATUS;
-	}
-	public String getSTOPFLAG() {
-		return STOPFLAG;
-	}
-	public void setSTOPFLAG(String sTOPFLAG) {
-		STOPFLAG = sTOPFLAG;
+	public void setRectype(String rectype) {
+		this.rectype = rectype;
 	}
 	public Date getRECCREATETIME() {
 		return RECCREATETIME;
