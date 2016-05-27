@@ -31,6 +31,7 @@ public class IMP {
 				data.setProductmaterial(r.get("MATERIALCZ"));
 				data.setProductth(r.get("DRAWNO"));
 				data.setRectype(r.get("EDITSTATE"));
+				data.setRecnote(r.get("STOPFLAG"));
 				data.setProduct_in_id(r.get("MATERIALNM"));
 				data.setClass_id(r.get("MATERIALSORTNM"));
 				data.setUnit_id(r.get("PRIMARYUNITNM"));
@@ -141,16 +142,16 @@ public class IMP {
 //		impMDMMATSORTS(T_IT_JD_MATERIALCLASSES);
 //		impMDMMATCOM(t_it_jd_relation);
 //		impMDMUNITS(t_it_jd_unit);
-//		String table = "T_IT_JD_MATERIALS";
+		String table = "T_IT_JD_MATERIALS";
 //		String table = "T_IT_YZB_RELATION";
 //		String table = "T_IT_YZB_MATERIALS";
-		String table = "T_IT_YZB_MATERIALCLASSES";
+//		String table = "T_IT_YZB_MATERIALCLASSES";
 //		String table = "T_IT_YZB_UNIT";
-//		impMDMMATERIALS(t_it_yzb_materials,table);
+		impMDMMATERIALS(t_it_yzb_materials,table);
 //		impMDMMATERIALS(t_it_jd_materials,table);
 //		impMDMMATCOM(t_it_yzb_relation,table);
 //		impMDMUNITS(t_it_yzb_unit,table);
-		impMDMMATSORTS(T_IT_yzb_MATERIALCLASSES, table);
+//		impMDMMATSORTS(T_IT_yzb_MATERIALCLASSES, table);
 	}
 	
 }
